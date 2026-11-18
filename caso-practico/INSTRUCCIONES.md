@@ -1,6 +1,8 @@
 # Caso práctico · StreamFlow con dbt + DuckDB
 
-Tiempo orientativo: **15 minutos**.
+Tiempo orientativo del ejercicio: **15 minutos**, una vez que dbt esté instalado.
+
+> En estos ordenadores DuckDB ya está disponible, pero **dbt no viene instalado**, así que antes de empezar hay que instalarlo y comprobar que Windows reconoce el comando.
 
 La seed y la configuración ya están preparadas. Tu trabajo es crear los modelos indicados, ejecutar el pipeline y observar qué cambia en cada capa.
 
@@ -22,9 +24,66 @@ Al final entregarás **5 capturas**. Debajo de cada una responde una pregunta co
 
 ---
 
-## 0. Comprobar que dbt funciona
+## 0. Instalar dbt y comprobar la configuración
 
-Abre una terminal dentro de `caso-practico/` y ejecuta:
+### 0.1 Instalar dbt
+
+Abre PowerShell o la terminal de VS Code y ejecuta:
+
+```powershell
+python -m pip install dbt
+```
+
+Cuando termine, comprueba la instalación:
+
+```powershell
+dbt --version
+```
+
+Deberías ver una versión de dbt en pantalla.
+
+### Si Windows dice que `dbt` no se reconoce
+
+Puede ocurrir que dbt se haya instalado correctamente pero que la carpeta donde está `dbt.exe` no esté añadida al **PATH**.
+
+Durante la instalación, fíjate si aparece un aviso parecido a:
+
+```text
+WARNING: The script dbt.exe is installed in
+C:\...\Python\...\Scripts
+which is not on PATH.
+```
+
+En ese caso:
+
+1. Copia la ruta que termina en `Scripts`.
+2. Busca en Windows **Editar las variables de entorno para tu cuenta**.
+3. En `Path` → **Editar** → **Nuevo**, añade esa ruta.
+4. Guarda los cambios.
+5. Cierra y vuelve a abrir PowerShell o VS Code.
+6. Comprueba otra vez:
+
+```powershell
+dbt --version
+```
+
+También puedes comprobar dónde está dbt con:
+
+```powershell
+where.exe dbt
+```
+
+> Si `dbt --version` funciona, no hace falta tocar el PATH.
+
+### 0.2 Entrar en la carpeta de la práctica
+
+Abre una terminal dentro de:
+
+```text
+caso-practico/
+```
+
+Ahora comprueba que dbt reconoce el proyecto y la conexión con DuckDB:
 
 ```powershell
 dbt debug --project-dir . --profiles-dir .
@@ -35,6 +94,8 @@ Debe terminar con:
 ```text
 All checks passed!
 ```
+
+`--profiles-dir .` indica a dbt que busque `profiles.yml` en la carpeta actual. El punto `.` significa "directorio actual".
 
 ---
 
