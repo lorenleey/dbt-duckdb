@@ -1,0 +1,14 @@
+play_id,user_id,track_id,artist,track,track_duration_s,played_seconds,country,device,played_at
+P001,U001,T01," Nova Echo ","Midnight Signal ",210,205,es,MOBILE,2026-11-10 08:00:00
+P002,U002,T02,Luma,Glass City,184,25,ES,desktop,2026-11-10 08:04:00
+P003,U003,T03,Atlas Run,Satellite Heart,240,239,,mobile,2026-11-10 08:08:00
+P004,U001,T04,Nova Echo,Afterlight,200,72,ES,mobile,2026-11-10 08:12:00
+P005,U004,T05,Mar Azul,Kilometro Cero,198,198,AR,tv,2026-11-10 08:15:00
+P006,U005,T02,Luma,Glass City,184,160,CO,,2026-11-10 08:20:00
+P007,U006,T06,Atlas Run,Northbound,230,12,ES,desktop,2026-11-10 08:24:00
+P008,U003,T03,Atlas Run,Satellite Heart,240,220,MX,mobile,2026-11-10 08:30:00
+P009,U007,T05,Mar Azul,Kilometro Cero,198,96,ES,tv,2026-11-10 08:35:00
+P010,U008,T01,Nova Echo,Midnight Signal,210,210,CO,mobile,2026-11-10 08:40:00
+P011,U009,T07,Luma,Silver Lines,176,90,ES,desktop,2026-11-10 08:45:00
+P012,U010,T08,Mar Azul,Brujula,205,34,AR,mobile,2026-11-10 08:50:00
+P013,U011,T09,,Horizonte,190,120,ES,mobile,2026-11-10 08:55:00
