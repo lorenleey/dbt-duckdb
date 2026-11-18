@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_streams
+    description: Eventos de streaming normalizados.
+    columns:
+      - name: play_id
+        data_tests:
+          - unique
+          - not_null
+      - name: artist
+        data_tests:
+          - not_null
+      - name: device
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - mobile
+                  - desktop
+                  - tv
+                  - unknown
+
+  - name: artist_metrics
+    description: Métricas agregadas por artista.
+    columns:
+      - name: artist
+        data_tests:
+          - unique
+          - not_null
