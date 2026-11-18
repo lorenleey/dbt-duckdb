@@ -1,0 +1,16 @@
+name: streamflow
+version: '1.0.0'
+profile: streamflow
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  streamflow:
+    +materialized: view
