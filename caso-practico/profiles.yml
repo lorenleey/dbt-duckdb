@@ -1,0 +1,8 @@
+streamflow:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "./streamflow.duckdb"
+      schema: main
+      threads: 4
